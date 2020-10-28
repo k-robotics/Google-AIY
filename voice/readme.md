@@ -24,3 +24,6 @@ Google AIY V2
   * [Maker's Guide](https://aiyprojects.withgoogle.com/voice/#makers-guide)
   
   
+![10883910_15516832688045](https://user-images.githubusercontent.com/73572415/97406614-d6f45100-193c-11eb-9ba7-aae8fde50cbe.jpg)
+![10883910_155168326895272](https://user-images.githubusercontent.com/73572415/97406628-db206e80-193c-11eb-82b9-0d43136b9bf8.jpg)
+![10883910_155168326895273](https://user-images.githubusercontent.com/73572415/97406634-dd82c880-193c-11eb-8e34-691a2b068430.jpg)
