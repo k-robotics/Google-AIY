@@ -1,5 +1,5 @@
 # Google-AIY
-* [AYI Voice V2](https://gitgub.com/k-robotics/Google-AIY/voice/)
+* [AYI Voice V2](https://github.com/k-robotics/Google-AIY/tree/main/voice)
   -----------------
   * [Google Assistant SDK guides](https://developers.google.com/assistant/sdk/)
   * [Voice Kit SD image](https://github.com/google/aiyprojects-raspbian/releases)
