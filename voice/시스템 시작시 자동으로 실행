@@ -1,0 +1,45 @@
+### 1. /etc/systemd/system/ 에 시스템 파일 생성(assist.service , 다른 이름이어도 상관 없음)
+ > 1-1. 시스템 파일에는 부팅 시 시작되는 것<br>
+ > 1-2. 모니터 연결 없이도 시작되는 것<br>
+ > 1-3. 사용자 입력<br>
+ > 1-4. 실행할 파일 등의 설정이 필요<br>
+
+Unit : 단락의 after 명령어는 네트워크가 연결된 이후에 작동하라는 명령  
+service 부분의 Environment=DISPLAY=:0 코드는 화면 연결이 없이도 작동하게끔 만드는 코드  
+SyslogIdentifier= 위에서 만든 본인의 시스템 파일 이름  
+
+
+
+```
+$ sudo vi /etc/systemd/system/assist.service
+
+[Unit]
+Description=assist
+After=network.target ntpdate.service
+
+[Service]
+Environment=DISPLAY=:0
+ExecStart=/home/pi/AIY-projects-python/src/examples/voice/assistant_grpc_demo.py
+Restart=always or on-failure
+User=pi
+Group=pi
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=assist
+
+[Install]
+WantedBy=multi-user.target  
+```
+
+
+
+
+### 2. 시스템 시작
+````
+$ sudo systemctl enable assist.service
+$
+$ sudo service assist start
+$
+$ sudo reboot -h now
+````
+### 3. 보이스 킷이 작동 중인지 확인하고 싶은 경우 라즈베리파이 터미널에서 sudo service assist status 코드로 확인
